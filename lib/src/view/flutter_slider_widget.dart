@@ -2015,17 +2015,17 @@ class _FlutterSliderState extends State<FlutterSlider>
     double? top, right, bottom, left;
     switch (_tooltipData.direction) {
       case FlutterSliderTooltipDirection.top:
-        top = 0;
+        top = _tooltipData.alwaysShowTooltip == true ? -25 : 0;
         left = 0;
         right = 0;
         break;
       case FlutterSliderTooltipDirection.left:
-        left = 0;
+        left = _tooltipData.alwaysShowTooltip == true ? -25 : 0;
         top = 0;
         bottom = 0;
         break;
       case FlutterSliderTooltipDirection.right:
-        right = 0;
+        right = _tooltipData.alwaysShowTooltip == true ? -25 : 0;
         top = 0;
         bottom = 0;
         break;
